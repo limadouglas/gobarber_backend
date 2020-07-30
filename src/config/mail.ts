@@ -8,6 +8,6 @@ interface IMailConfig {
 export default {
   driver: process.env.MAIL_DRIVER || 'ethereal',
   defaults: {
-    from: { email: 'contato@aimportada.com.br', name: 'Contato' },
+    from: { email: 'contato@aimportada.com.br', name: 'Douglas Henrique' },
   },
 } as IMailConfig;
