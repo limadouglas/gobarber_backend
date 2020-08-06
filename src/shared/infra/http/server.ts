@@ -10,14 +10,15 @@ import '../typeorm';
 import routes from '@shared/infra/http/routes';
 import uploadConfig from '@config/upload';
 import AppError from '@shared/error/AppError';
+import { errors } from 'celebrate';
+import rateLimiter from './middlewares/rateLimiter';
 
 import '@shared/container/index';
 import 'dotenv/config';
 
-import { errors } from 'celebrate';
-
 const app = express();
 
+app.use(rateLimiter);
 app.use(cors());
 app.use(express.json());
 app.use('/files', express.static(uploadConfig.uploadsFolder));
