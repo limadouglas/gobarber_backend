@@ -16,7 +16,7 @@ import INotificationRepository from '@modules/notifications/repositories/INotifi
 import NotificationsRepository from '@modules/notifications/infra/typeorm/repositories/NotificationsRepository';
 
 container.registerSingleton<IAppointmentsRepository>(
-  'AppointmentRepository',
+  'AppointmentsRepository',
   AppointmentsRepository,
 );
 
