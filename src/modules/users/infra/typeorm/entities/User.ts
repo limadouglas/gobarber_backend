@@ -28,7 +28,7 @@ class User extends Repository<User> {
   @Column()
   avatar: string;
 
-  @Expose({ name: 'avatar_url' })
+  @Expose({ name: 'url_avatar' })
   getAvatarUrl(): string | null {
     if (!this.avatar) {
       return null;
