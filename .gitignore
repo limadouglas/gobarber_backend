@@ -10,3 +10,4 @@ tmp/*
 !tmp/.gitkeep
 .env
 yarn.lock
+package.lock
