@@ -40,6 +40,6 @@ app.use(
   },
 );
 
-app.listen(3333, () => {
+app.listen(process.env.PORT_SERVER, () => {
   console.log('Servidor em Funcionamento!!!!');
 });
